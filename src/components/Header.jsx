@@ -5,13 +5,22 @@ import { Button } from "./styles/Button.styled";
 import { Flex } from "./styles/Flex.styled";
 import LogoSvg from "@/static/assets/logo.svg";
 import IllustrationMockups from "@/static/assets/Illustration-mockups.svg";
+
+function dynamicImport() {
+  return import(/* webpackChunkName: "test"*/ "../utils/codeSplitting.js").then(
+    ({ codeSplitting }) => codeSplitting()
+  );
+}
 export default function Header() {
+  const onClickHandler = () => {
+    dynamicImport().then((res) => alert(res));
+  };
   return (
     <StyledHeader>
       <Container>
         <Nav>
           <Logo src={LogoSvg} alt="" />
-          <Button>Try It Free</Button>
+          <Button onClick={onClickHandler}>Try It Free</Button>
         </Nav>
 
         <Flex>

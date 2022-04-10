@@ -3,11 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "../build"),
-    publicPath: "/",
-    filename: "[name].js",
-  },
+
   resolve: {
     extensions: [".jsx", ".js"], // resolve.extenstions를 이용하면 import 할 때,
     // 해당 배열안의 확장자를 가진 파일들은 확장자를 입력하지 않아도 됨 리액트를 쓸때는 .jsx도 추가해줄 것

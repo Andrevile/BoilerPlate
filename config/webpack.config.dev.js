@@ -6,6 +6,11 @@ const Dotenv = require("dotenv-webpack");
 module.exports = merge(commonWebpack, {
   mode: "development",
   devtool: "inline-source-map",
+  output: {
+    path: path.resolve(__dirname, "../build"),
+    publicPath: "/",
+    filename: "[name].js",
+  },
   module: {
     rules: [
       {
