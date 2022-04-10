@@ -35,7 +35,6 @@ module.exports = merge(commonWebpack, {
     new CleanWebpackPlugin(),
   ],
   optimization: {
-    runtimeChunk: "single",
     moduleIds: "deterministic",
     splitChunks: {
       cacheGroups: {
