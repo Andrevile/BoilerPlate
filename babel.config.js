@@ -12,6 +12,7 @@ module.exports = {
       },
     ],
     '@babel/preset-react',
+    '@babel/preset-typescript',
   ],
 
   plugins: ['@babel/plugin-proposal-class-properties', ['@babel/plugin-transform-runtime', { corejs: 3 }]], // 플러그인들을 따로 추가할 수 있음, preset은 플러그인들을 모아 놓은 것
