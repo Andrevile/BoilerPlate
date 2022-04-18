@@ -9,7 +9,7 @@
 
 ## 적용사항
 ```
-- 
+- React
 - Babel
 - eslint + prettier
 - Assets resource 최적화
